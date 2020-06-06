@@ -6,10 +6,10 @@ const auth = require(`../middleware/auth`);
 const { check, validationResult } = require(`express-validator`);
 const router = express.Router();
 
-// @route    POST api/auth
+// @route    Get api/auth
 //@desc      Get logged in User
 //@access    Private
-router.get(`/`, auth, (req,res) => {
+router.get(`/`, auth, async (req,res) => {
     try {
         const user = await user.findById(req.user.id).select(`-password`);
         res.json(user);
@@ -18,6 +18,7 @@ router.get(`/`, auth, (req,res) => {
         res.status(500).send(`Server error`);
     }
 });
+
 
 // @route    POST api/auth
 //@desc      Auth user & get token
