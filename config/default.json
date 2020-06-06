@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://LidiCo:Lidi123456@contactkeeper-23a9r.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "EdenZakenIsTheNewName"
+}
